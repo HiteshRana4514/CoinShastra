@@ -1,0 +1,2 @@
+# CoinShastra
+Crypto Market Insights
