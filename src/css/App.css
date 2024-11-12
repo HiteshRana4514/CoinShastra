@@ -1,0 +1,174 @@
+.header{
+    padding: 20px 0;
+    background-color: #EDF4F2;
+    position: relative;
+}
+.header-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar{
+    display: none;
+}
+.navbar.active{
+    position: absolute;
+    display: block;
+    top: 100%;
+    right: 0;
+    left: 0;
+    height: calc(100vh - 80px);
+    background-color: #EDF4F2;
+}
+.navbar.active ul{
+    padding: 20px 0;
+
+}
+.navbar.active ul li{
+    padding: 10px 20px;
+    transition: all 0.4s;
+}
+.navbar.active ul li:hover{
+    background-color: #fff;
+}
+.navbar-wrap{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar ul li a{
+    color: #31473A;
+}
+.mob-search{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.search-block{
+    width: 30px;
+    height: 35px;
+    position: relative;
+    transition: all 0.4s;
+}
+.search-block.active{
+    width: 180px;
+}
+.search-field{
+    display: block;
+    width: 0;
+    height: 100%;
+    transition: all 0.4s;
+}
+.search-field.active{
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 35px 10px 20px;
+    color: #EDF4F2;
+    background-color: #31473A;
+    font-size: 16px;
+}
+.search-icon{
+    position: absolute;
+    top: 0;
+    right: 2px;
+    bottom: 0;
+    height: 30px;
+    width: 30px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.search-icon i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/search-icon.svg') no-repeat center;
+    background-size: 30px 30px;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(20%) saturate(616%) hue-rotate(92deg) brightness(95%) contrast(87%);
+}
+.search-icon.active i{
+    filter: none;
+}
+.mob-menu{
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+.mob-menu.active .menu-line:first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto 0;
+    transform: rotate(45deg);
+}
+.mob-menu.active .menu-line:last-child{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    margin: auto 0;
+    transform: rotate(-45deg);
+}
+.mob-menu.active .menu-line:nth-child(2){
+    display: none;
+}
+.menu-line{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #31473A;
+    margin-bottom: 10px;
+    transition: all 0.4s;
+}
+.menu-line:last-child{
+    margin-bottom: 0;
+}
+.search-suggestions-wrap{
+    position: absolute;
+    top: 115%;
+    left: 0;
+    background-color: #31473A;
+    right: 0;
+}
+.search-suggestion{
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    width: 100%;
+}
+.search-suggestion:hover{
+    background-color: #EDF4F2;
+}
+.search-suggestion:last-child{
+    margin-bottom: 0;
+}
+.search-suggestion a{
+    color: #EDF4F2;
+}
+.search-suggestion:hover a{
+    color: #31473A;
+}
+
+
+
+.ring {
+    --f:1;
+    width: 13em;
+    height: 13em;
+    transform: scale(var(--f));
+    opacity: var(--f);
+    background: radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.1) calc((10% - 2px)), transparent calc((10% - 1px))), radial-gradient(circle at 50% 10%, #31473A calc((10% - 2px)), transparent calc((10% - 1px))), radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.1) calc((10% - 2px)), transparent calc((10% - 1px))), radial-gradient(circle at 90%, #31473A calc((10% - 2px)), transparent calc((10% - 1px))), radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.1) calc((10% - 2px)), transparent calc((10% - 1px))), radial-gradient(circle at 50% 90%, #31473A calc((10% - 2px)), transparent calc((10% - 1px))), radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.1) calc((10% - 2px)), transparent calc((10% - 1px))), radial-gradient(circle at 10%, #31473A calc((10% - 2px)), transparent calc((10% - 1px)));
+    animation: rotation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  }
+  .ring > .ring {
+    --f: 0.6;
+  }
+  
+  @keyframes rotation {
+    to {
+      transform: scale(var(--f)) rotate(1turn);
+    }
+  }

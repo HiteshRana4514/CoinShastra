@@ -1,0 +1,27 @@
+@media screen and (min-width: 720px) {
+    .navbar{
+        display: block;
+        
+    }
+    .navbar.active{
+        position: static;
+        height: auto;
+    }
+    .navbar ul{
+        display: flex;
+        gap: 20px;
+    }
+    .mob-menu{
+        display: none;
+    }
+    .navbar.active ul{
+        padding: 0;
+    
+    }
+    .navbar.active ul li{
+        padding: 0;
+    }
+    .navbar.active ul li:hover{
+        background-color: none;
+    }
+}
