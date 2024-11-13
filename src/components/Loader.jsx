@@ -3,10 +3,10 @@ import react from 'react'
 function Loader() {
     return (
         <>
-            <div class="ring">
-                <div class="ring">
-                    <div class="ring">
-                        <div class="ring"></div>
+            <div className="ring">
+                <div className="ring">
+                    <div className="ring">
+                        <div className="ring"></div>
                     </div>
                 </div>
             </div>
